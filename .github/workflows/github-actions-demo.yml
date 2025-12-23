@@ -1,0 +1,12 @@
+name: GitHub Actions Demo
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v5
+      - name: Hello from Actions
+        run: |
+          echo "This workflow runs on push!"
+          echo "Repository: ${{ github.repository }}"
